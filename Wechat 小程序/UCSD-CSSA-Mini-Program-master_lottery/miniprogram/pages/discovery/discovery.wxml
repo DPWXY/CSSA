@@ -1,0 +1,81 @@
+<!-- 顶部导航栏 -->
+<l-capsule-bar hidden-capsule="{{true}}" home-page="/pages/welcome/welcome" title="UCSD CSSA" bg-color="#C22A1E"
+  capsule-color="white" title-color="white">
+</l-capsule-bar>
+
+<!-- 整体容器 -->
+<view class="container">
+
+  <!-- 搜索栏 -->
+  <view class="search-bar-container">
+    <l-search-bar l-class="l-search-bar" placeholder="{{searchTitle}}" value="{{input}}" shape="circle"
+      bg-color="#ffffff" show-cancel="{{false}}" value="{{input}}" bind:linchange="onSearch"
+      bind:lincancel="onSearchCancel" bind:linconfirm="onSearch" bind:linclear="onSearchCancel" />
+    <!-- 分割线 -->
+    <view class="hr"></view>
+  </view>
+
+  <!-- 非搜索时的页面 -->
+  <view wx:if="{{!isSearching}}">
+    <!-- 轮播图 -->
+    <swiper class="swiper" indicator-dots="{{true}}" indicator-active-color="white" indicator-color="gray"
+      autoplay="{{true}}" interval="2000" duration="1000" circular="{{true}}">
+      <block wx:for="{{headlines}}" wx:key="index">
+        <swiper-item bindtap="onHeadlineTap" data-article="{{item}}">
+          <view class="headlines">
+            <image src="{{item.poster}}" mode="aspectFill" class="img"></image>
+            <text class="title">{{item.articleInfo[0].title}}</text>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <!-- 文章集合 -->
+    <view class="collection-container">
+      <block wx:for="{{collections}}" wx:key="index">
+        <view class="collection" bind:tap="onCollectionTap" data-name="{{item.text}}">
+          <image class="collection-img" src="{{item.src}}" mode="aspectFit"></image>
+          <view class="collection-text">
+            <text>{{item.text}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+
+    <!-- 精选推荐 -->
+    <view class="starred-container">
+      <view class="starred-header">
+        <view class="header-text">
+          <text>精选推荐</text>
+        </view>
+        <view class="more" bind:tap="onCollectionTap" data-name="精选推荐">
+          <text>更多 ></text>
+        </view>
+      </view>
+
+      <view class="item-container">
+        <block wx:for="{{starredArticles}}" wx:key="index">
+          <e-starred-article-preview image="{{item.thumbnail}}" title="{{item.title}}" bind:tap="onArticleTap"
+            data-article="{{item}}"></e-starred-article-preview>
+        </block>
+      </view>
+    </view>
+  </view>
+
+  <!-- 搜索页面 -->
+  <view wx:else>
+    <block wx:for="{{searchResult}}" wx:key="index">
+      <e-article-preview image="{{item.thumbnail}}" title="{{item.title}}" summary="{{item.summary}}" bind:tap="onSearchTap" data-article="{{item}}"></e-article-preview>
+    </block>
+    <view class="not-found" wx:if="{{searchResult.length == 0}}">
+      <text>未搜索到文章</text>
+    </view>
+  </view>
+</view>
+
+
+<!-- 占位 防止导航栏遮挡 -->
+<view class="stand-view"></view>
+
+<!-- 底部导航栏 -->
+<l-tab-bar list="{{list}}" text-selected-color="#C22A1E" />

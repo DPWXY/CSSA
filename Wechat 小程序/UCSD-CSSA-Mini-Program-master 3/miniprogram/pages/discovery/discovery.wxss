@@ -1,0 +1,165 @@
+.container {
+  padding-top: 20rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.l-search-bar {
+  width: 630rpx;
+  position: relative;
+  margin-top: 5rpx;
+  /* margin-left: -40rpx; */
+}
+
+.hr {
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  width: 100%;
+  height: 1px;
+  background-color: #d9d9d9;
+}
+
+.swiper {
+  width: 700rpx;
+  height: 400rpx;
+}
+
+.headlines {
+  width: 100%;
+  height: 100%;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  display: block;
+  color: white;
+  position: absolute;
+  text-align: center;
+  left: 30rpx;
+  right: 10rpx;
+  bottom: 50rpx;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.collection-container {
+  width: 700rpx;
+  height: 250rpx;
+  margin-top: 30rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.collection {
+  width: 175rpx;
+  height: 120rpx;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* 给前四个元素下面加点距离 */
+.collection:nth-child(-n+4) {
+  padding-bottom: 10rpx;
+}
+
+/* 给前四个元素加上下边框 */
+.collection:nth-child(-n+4)::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1rpx;
+  background-color: silver;
+}
+
+
+/* 给所有元素加上右边框 */
+.collection::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 1rpx;
+  height: 110%;
+  background-color: silver;
+}
+
+/* 给第4和8个元素去除右边框 */
+.collection:nth-child(4n)::after {
+  visibility: hidden;
+}
+
+.collection-img {
+  margin-top: 10rpx;
+  width: 175rpx;
+  height: 75rpx;
+}
+
+.collection-text {
+  height: 25rpx;
+  font-size: smaller;
+  margin-bottom: 10rpx;
+}
+
+.starred-container {
+  width: 700rpx;
+  margin-top: 30rpx;
+  background-color: white;
+  border-radius: 15px;
+  padding: 10rpx;
+  position: relative;
+  padding-bottom: 30rpx;
+}
+
+.starred-header {
+  padding-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.header-text {
+  margin-left: 30rpx;
+}
+
+.more {
+  position: absolute;
+  right: 40rpx;
+  top: 20rpx;
+  color: #1552cb;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 700rpx;
+  background-color: white;
+  color: gray;
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 10rpx;
+}
+
+.stand-view {
+  width: 100%;
+  height: 150rpx;
+}

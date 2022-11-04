@@ -1,0 +1,36 @@
+<!-- 顶部导航栏 -->
+<l-capsule-bar home-page="/pages/welcome/welcome" title="{{title}}" bg-color="#C22A1E" capsule-color="white"
+    title-color="white">
+</l-capsule-bar>
+
+<!--模板-->
+<view >
+  <!--img-->
+  <view class="img">pm团想的文案（doge）</view>
+
+  <!--my_results-->
+  <view class="my_results">my_results</view>
+
+  <!--general_results-->
+  <view class= "results_container"> 
+  
+    <!--first_prize-->
+    <view class="first_prize">
+      <text>一等奖\n钝角</text> 
+
+    </view>
+    
+    <!--second_prize-->
+    <view class="second_prize">
+      <text>二等奖\n钝角</text> 
+    </view>
+
+    <!--third_prize-->
+    <view class="third_prize">
+      <text>三等奖\n钝角</text>
+    </view>
+
+  </view>
+
+
+</view>

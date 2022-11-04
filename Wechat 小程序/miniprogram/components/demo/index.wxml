@@ -1,0 +1,5 @@
+<!--components/demo/index.wxml-->
+<!-- <text>components/demo/index.wxml</text> -->
+<text>123123123   </text>
+<!-- 传东西到组建然后用 -->
+<text>{{x}}</text>

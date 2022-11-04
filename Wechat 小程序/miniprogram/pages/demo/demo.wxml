@@ -1,0 +1,68 @@
+<!--pages/demo/demo.wxml-->
+<text>this is a demo test</text>
+<image src="/1.jpg" mode="aspectFit"></image>
+<image src = "/2.png" mode="aspectFit"></image>
+<swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="3000">
+    <swiper-item>
+        <image src="/1.jpg" mode="aspectFit"></image>
+    </swiper-item>
+    <swiper-item>
+        <image src = "/2.png" mode="aspectFit"></image>
+    </swiper-item>
+    <swiper-item>
+        12345
+    </swiper-item>
+</swiper>
+
+<view class="view1">
+    <text>12345</text>
+</view>
+<view class="view2">
+    <text>45678</text>
+</view>
+<view class="view3"></view>
+<view class="view4"></view>
+
+<view class="demo">12345</view>
+<view class="container">
+    <view class="view1">
+        <view class="view5"></view>
+        <view class="view6"></view>
+    </view>
+    <view class="view2"></view>
+    <view class="view3"></view>
+    <view class="view4"></view>
+</view>
+
+<!-- <view>{{x}}</view> -->
+<view>{{y}}</view>
+<view>{{z}}</view>
+
+<!-- tap demo -->
+<view bind:tap="onTap" >{{x}}</view>
+<view bind:tap="onTap" data-demo="666">{{k}}</view>
+
+<!-- 组建demo 更易使用，直接在component里定义 -->
+<x-demo></x-demo>
+<x-demo></x-demo>
+<x-demo></x-demo>
+
+<x-demo x="666"></x-demo>
+<x-demo x="777"></x-demo>
+<!-- 跳转页面demo -->
+<view bind:tap="onTap2">换页</view>
+
+<!-- demo 循环 -->
+<view>{{l[0]}}</view>
+<!-- /* 改名 否则默认item*/ -->
+<block wx:for="{{l}}" wx:for-item="demo"> 
+    <view>{{index}}</view>
+    <view>{{demo}}</view>
+</block>
+
+<!-- demo if else -->
+<view wx:if="{{b}}">888</view>
+<view wx:if="{{c}}">777</view>
+<view wx:else>444</view>
+
+<view>test test</view>

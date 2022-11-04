@@ -1,0 +1,6 @@
+<view class="container">
+    <image class="thumbnail" src="{{image}}" mode="aspectFill"></image>
+    <view class="text-container">
+        <text class="title">{{title}}</text>
+    </view>
+</view>
