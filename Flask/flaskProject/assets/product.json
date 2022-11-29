@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "product_id": 0,
+      "price": 10,
+      "product_name": "lol"
+    },
+    {
+      "product_id": 1,
+      "price": 11,
+      "product_name": "dota"
+    },
+    {
+      "product_id": 2,
+      "price": 12,
+      "product_name": "nice"
+    }
+  ]
+}
