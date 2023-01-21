@@ -1,0 +1,8 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+.idea
+auto-import.d.ts
+src/classified.js

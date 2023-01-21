@@ -1,1 +1,1 @@
-DB_PASSWORD = "soifjaiods"
+DB_PASSWORD = "Demopassword"
